@@ -1,0 +1,6 @@
+projectKey=idlc-calculator
+serverUrl=http://localhost:9000
+serverVersion=25.4.0.105899
+dashboardUrl=http://localhost:9000/dashboard?id=idlc-calculator
+ceTaskId=24e389f4-5979-4e1b-be73-deac4d4f153f
+ceTaskUrl=http://localhost:9000/api/ce/task?id=24e389f4-5979-4e1b-be73-deac4d4f153f
