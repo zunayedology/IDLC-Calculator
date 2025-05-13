@@ -5,7 +5,7 @@ function safeEval(expression) {
         if (/\/0(?!\d)/.test(expression)) {
             return "Undefined";
         }
-        if (/[+\-*\/]{2,}/.test(expression.replace(/\s+/g, ''))) {
+        if (/[+\-*/]{2,}/.test(expression.replace(/\s+/g, ''))) {
             return "Error";
         }
         const parser = new exprEval.Parser();
