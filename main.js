@@ -19,7 +19,8 @@ function safeEval(expression) {
         }
         return result;
     } catch (e) {
+        // Log the error for debugging purposes
+        console.error("Expression evaluation error:", e);
         return "Error";
     }
 }
-
