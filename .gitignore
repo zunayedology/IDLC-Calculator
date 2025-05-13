@@ -1,4 +1,4 @@
 .git
 .vs
-/node_modules
+node_modules/
 console.txt
