@@ -19,6 +19,13 @@ pipeline {
                 bat 'npm test'
             }
         }
+        stage('Clear Cache') {
+            steps {
+                bat '''
+                if exist "node_modules\\.cache" rmdir /s /q "node_modules\\.cache"
+                '''
+            }
+        }
         stage('Deploy to GitHub Pages') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'github-credentials', usernameVariable: 'GITHUB_USERNAME', passwordVariable: 'GITHUB_TOKEN')]) {
