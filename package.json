@@ -6,7 +6,11 @@
     "eslint": "^9.26.0",
     "expr-eval": "^2.0.2"
   },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
   "jest": {
-    "coverageReporters": [ "lcov", "text" ]
+    "coverageReporters": [ "lcov", "text" ],
+    "coverageDirectory": "coverage"
   }
 }
