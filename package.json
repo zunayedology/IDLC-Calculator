@@ -1,4 +1,7 @@
 {
+  "name": "idlc-calculator",
+  "version": "1.0.0",
+  "homepage": "https://zunayedology.github.io/idlc-calculator",
   "scripts": {
     "test": "jest --coverage"
   },
@@ -8,6 +11,7 @@
     "lru-cache": "^11.1.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "jest": "^29.7.0"
   },
   "jest": {

@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>IDLC Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <div class="container">
         <form class="calculator" name="calc">
             <input type="text" readonly class="value" name="txt" />
@@ -34,9 +32,7 @@
             <span class="num equal" onclick="document.calc.txt.value = safeEval(calc.txt.value)"> = </span>
         </form>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/expr-eval@2.0.2/dist/bundle.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
-
 </body>
 </html>
