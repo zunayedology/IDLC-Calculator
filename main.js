@@ -2,7 +2,7 @@ const exprEval = require('expr-eval');
 
 function safeEval(expression) {
     try {
-        if (/\/\s*0(?!\d)/.test(expression)) {
+        if (/\/0(?!\d)/.test(expression)) {
             return "Undefined";
         }
         if (/[+\-*\/]{2,}/.test(expression.replace(/\s+/g, ''))) {
