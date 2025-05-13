@@ -1,10 +1,11 @@
-VanillaTilt.init(document.querySelector(".container"), {
-    max: 15,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.1,
-
-});
+if (typeof window !== 'undefined' && window.VanillaTilt) {
+    window.VanillaTilt.init(document.querySelector(".container"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.1,
+    });
+}
 
 function safeEval(expression) {
     try {
@@ -23,4 +24,8 @@ function safeEval(expression) {
         console.error("Expression evaluation error:", e);
         return "Error";
     }
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { safeEval };
 }
