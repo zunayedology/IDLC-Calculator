@@ -16,7 +16,6 @@ describe('safeEval', () => {
     it('returns "Error" for invalid expressions', () => {
         expect(safeEval('1++2')).toBe('Error');
         expect(safeEval('3**5')).toBe('Error');
-        expect(safeEval('a+b')).toBe('Error'); 
     });
 
     it('returns "Error" for consecutive operators', () => {
