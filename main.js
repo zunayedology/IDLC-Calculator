@@ -1,6 +1,5 @@
 const exprEval = require('expr-eval');
 
-
 function safeEval(expression) {
     try {
         if (/\/\s*0(?!\d)/.test(expression)) {
@@ -20,7 +19,6 @@ function safeEval(expression) {
         return "Error";
     }
 }
-
 
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { safeEval };
