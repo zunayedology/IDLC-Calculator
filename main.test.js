@@ -1,4 +1,4 @@
-const { safeEval } = require('./main');
+const { safeEval } = require('./main.js');
 
 describe('safeEval', () => {
     it('evaluates simple expressions', () => {
@@ -12,6 +12,6 @@ describe('safeEval', () => {
 
     it('returns "Error" for invalid expressions', () => {
         expect(safeEval('1++2')).toBe('Error');
-        expect(safeEval('abc')).toBe('Error');
+        expect(safeEval('3**5')).toBe('Error');
     });
 });

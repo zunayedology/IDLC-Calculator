@@ -1,11 +1,4 @@
-if (typeof window !== 'undefined' && window.VanillaTilt) {
-    window.VanillaTilt.init(document.querySelector(".container"), {
-        max: 15,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.1,
-    });
-}
+const exprEval = require('expr-eval');
 
 function safeEval(expression) {
     try {
