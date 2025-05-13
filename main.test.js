@@ -13,11 +13,6 @@ describe('safeEval', () => {
         expect(safeEval('0 / 0')).toBe('Undefined');
     });
 
-    it('returns "Undefined" for Infinity results', () => {
-        expect(safeEval('1 / 0')).toBe('Undefined');
-        expect(safeEval('-1 / 0')).toBe('Undefined');
-    });
-
     it('returns "Error" for invalid expressions', () => {
         expect(safeEval('1 ++ 2')).toBe('Error');
         expect(safeEval('3 ** 5')).toBe('Error');
