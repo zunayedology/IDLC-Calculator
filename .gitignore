@@ -1,4 +1,5 @@
 .git
 .vs
+.env
 node_modules/
 console.txt
