@@ -3,7 +3,6 @@ const exprEval = require('expr-eval');
 
 function safeEval(expression) {
     try {
-        // Check for division by zero
         if (/\/\s*0(?!\d)/.test(expression)) {
             return "Undefined";
         }
