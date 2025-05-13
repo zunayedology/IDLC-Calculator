@@ -25,7 +25,8 @@ pipeline {
                     bat '''
                     git config --global user.email "jenkins@idlc-calculator.com"
                     git config --global user.name "Jenkins"
-                    npx gh-pages -d . -r https://%GITHUB_USERNAME%:%GITHUB_TOKEN%@github.com/zunayedology/idlc-calculator.git -b gh-pages
+                    set GH_TOKEN=%GITHUB_TOKEN%
+                    npx gh-pages -d . -b gh-pages
                     '''
                 }
             }
