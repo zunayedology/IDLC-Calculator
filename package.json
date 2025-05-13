@@ -4,13 +4,17 @@
   },
   "dependencies": {
     "eslint": "^9.26.0",
-    "expr-eval": "^2.0.2"
+    "expr-eval": "^2.0.2",
+    "lru-cache": "^11.1.0"
   },
   "devDependencies": {
     "jest": "^29.7.0"
   },
   "jest": {
-    "coverageReporters": [ "lcov", "text" ],
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
     "coverageDirectory": "coverage"
   }
 }
