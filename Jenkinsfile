@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/zunayedology/idlc-calculator.git'
+                git branch: 'main', url: 'https://github.com/zunayedology/idlc-calculator.git'
             }
         }
         stage('Install Dependencies') {
