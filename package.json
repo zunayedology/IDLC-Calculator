@@ -1,9 +1,12 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "eslint": "^9.26.0",
     "expr-eval": "^2.0.2"
+  },
+  "jest": {
+    "coverageReporters": [ "lcov", "text" ]
   }
 }
