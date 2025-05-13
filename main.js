@@ -1,4 +1,4 @@
-const exprEval = require('expr-eval');
+const exprEval = typeof window !== 'undefined' ? window.exprEval : require('expr-eval');
 
 function safeEval(expression) {
     try {
