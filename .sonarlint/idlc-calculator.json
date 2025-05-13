@@ -1,0 +1,4 @@
+{
+  "sonarQubeUri": "http://172.29.0.1:9000/",
+  "projectKey": "idlc-calculator-project"
+}

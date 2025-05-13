@@ -8,11 +8,12 @@ VanillaTilt.init(document.querySelector(".container"), {
 
 function safeEval(expression) {
     try {
-        // Check for division by zero using a regular expression
+        // Check for division by zero
         if (/\/\s*0(?!\d)/.test(expression)) {
             return "Undefined";
         }
-        let result = eval(expression);
+        const parser = new exprEval.Parser();
+        let result = parser.evaluate(expression);
         if (result === Infinity || result === -Infinity) {
             return "Undefined";
         }
@@ -21,3 +22,4 @@ function safeEval(expression) {
         return "Error";
     }
 }
+
