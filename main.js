@@ -2,9 +2,11 @@ const exprEval = typeof window !== 'undefined' ? window.exprEval : require('expr
 
 function safeEval(expression) {
     try {
-        if (/[\/]\s*0(?!\d)/.test(expression)) {
+        // sonar-disable-next-line regexp/no-useless-escape
+        if (/\/ \s*0(?!\d)/.test(expression)) {
             return "Undefined";
         }
+        // sonar-disable-next-line regexp/no-useless-escape
         if (/[+\-*\/]{2,}/.test(expression.replace(/\s+/g, ''))) {
             return "Error";
         }
