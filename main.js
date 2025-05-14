@@ -7,7 +7,7 @@ function safeEval(expression) {
             return "Undefined";
         }
         // sonar-disable-next-line regexp/no-useless-escape
-        if (/[+\-*\/]{2,}/.test(expression.replace(/\s+/g, ''))) {
+        if (/[+\-*/]{2,}/.test(expression.replace(/\s+/g, ''))) {
             return "Error";
         }
         const parser = new exprEval.Parser();
