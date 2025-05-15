@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <form class="calculator" name="calc">
             <input type="text" readonly class="value" name="txt" />
@@ -28,13 +29,14 @@
             <span class="num" onclick="document.calc.txt.value += '2'"> 2 </span>
             <span class="num" onclick="document.calc.txt.value += '3'"> 3 </span>
             <span class="num" onclick="document.calc.txt.value += '0'"> 0 </span>
-            <span class="num" onclick="document.calc.txt.value += '00'"> 0 </span>
+            <span class="num" onclick="document.calc.txt.value += '00'"> 00 </span>
             <span class="num" onclick="document.calc.txt.value += '.'"> . </span>
             <span class="num equal" onclick="document.calc.txt.value = safeEval(calc.txt.value)"> = </span>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/expr-eval@2.0.2/dist/bundle.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
+
 </body>
 
 </html>
