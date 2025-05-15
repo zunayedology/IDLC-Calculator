@@ -16,7 +16,9 @@ pipeline {
         }
         stage('Run Unit Tests') {
             steps {
-                bat 'npm test'
+                catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+                    bat 'npm test'
+                }
             }
         }
         stage('Clear Cache') {
