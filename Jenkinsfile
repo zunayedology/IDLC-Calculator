@@ -41,17 +41,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            httpRequest url: 'https://hooks.zapier.com/hooks/catch/22942437/27dvkzw/',
-                        httpMode: 'POST',
-                        contentType: 'APPLICATION_JSON',
-                        requestBody: """{
-                            "job_name": "${env.JOB_NAME}",
-                            "build_number": "${env.BUILD_NUMBER}",
-                            "status": "${currentBuild.currentResult}",
-                            "build_url": "${env.BUILD_URL}"
-                        }"""
-        }
-    }
 }
